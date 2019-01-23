@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create Vendor with JDE Reject">
+	<test name="HeiPort_Login_LDR">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="tasKill" />
+					<include name="openBrowser" />
+					<include name="loginAsVendorLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Fill in questionnaire">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Questionnaire" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Data">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Data_JDE" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Data_JDE">
+		<classes>
+			<class name="com.mendix.test.Vendor_JDE_Script">
+				<methods>
+					<include
+						name="Vendor_Create_Fill_In_Data_JDE_Local_Purchasing" />
+					<include
+						name="Vendor_Create_Fill_In_Data_JDE_Local_Finance" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_LDS">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsVendorLDS" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Review_Global_Data_Reject_LDS">
+		<classes>
+			<class name="com.mendix.test.Vendor_JDE_Script">
+				<methods>
+					<include
+						name="Vendor_Create_Review_Global_Data_Reject_LDS" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_LDS">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsVendorLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Review_Global_Data_Reject_Discard_LDR">
+		<classes>
+			<class name="com.mendix.test.Vendor_JDE_Script">
+				<methods>
+					<include
+						name="Vendor_Create_Review_Global_Data_Reject_Discard_LDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
+

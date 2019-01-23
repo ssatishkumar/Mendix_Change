@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Change_Material">
+              <span class="suite-name border-failed">Change Material</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Change_Material">
+                    <span>C:\Mendix_Workspace\Mendix\suite\scenarios\CreatewithRef.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Change_Material">
+                    <span class="test-stats">10 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Change_Material">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Change_Material">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Change_Material">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Change_Material">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Change_Material">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">14 methods, 3 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Change_Material" class="hide-methods failed suite-Change_Material"> (hide)</a> <!-- hide-methods failed suite-Change_Material -->
+                      <a href="#" panel-name="suite-Change_Material" class="show-methods failed suite-Change_Material"> (show)</a> <!-- show-methods failed suite-Change_Material -->
+                    </span>
+                    <div class="method-list-content failed suite-Change_Material">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialChangeScript" hash-for-method="Material_Create_Fill_In_Data_Reference({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)">Material_Create_Fill_In_Data_Reference({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialChangeScript" hash-for-method="Material_RequestId_Generation">Material_RequestId_Generation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialScript" hash-for-method="Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Change_Material -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Change_Material" class="hide-methods passed suite-Change_Material"> (hide)</a> <!-- hide-methods passed suite-Change_Material -->
+                      <a href="#" panel-name="suite-Change_Material" class="show-methods passed suite-Change_Material"> (show)</a> <!-- show-methods passed suite-Change_Material -->
+                    </span>
+                    <div class="method-list-content passed suite-Change_Material">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialChangeScript" hash-for-method="Material_Create_Reference_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">Material_Create_Reference_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialScript" hash-for-method="Material_Create_Review_Global_Data_Approve_GDA({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">Material_Create_Review_Global_Data_Approve_GDA({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialScript" hash-for-method="Material_Create_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">Material_Create_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.MaterialScript" hash-for-method="Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="loginAsGDA">loginAsGDA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="loginAsLDR">loginAsLDR</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="loginAsLDR">loginAsLDR</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="openBrowser">openBrowser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="openBrowser">openBrowser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="openBrowser">openBrowser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Change_Material" title="com.mendix.test.LoginScript" hash-for-method="tasKill">tasKill</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Change_Material -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Change_Material" class="panel Change_Material">
+          <div class="suite-Change_Material-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mendix.test.MaterialChangeScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Fill_In_Data_Reference({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)">
+                  </a> <!-- Material_Create_Fill_In_Data_Reference({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...) -->
+                  <span class="method-name">Material_Create_Fill_In_Data_Reference</span>
+                  <span class="parameters">({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2016, Language=NL, Description=Lens Niet Verlicht 82mm MAES 2016, Goods and Services Typology=13, Material Group=CMG0472, General Item Cat Group=YW07, X-plant matl Status Valid From=24/03/2017, Gross Weight Base UoM=200.000, Unit of Weight=G, EAN/UPC=, Material Type=YUNB, X-plant matl Status=Z3, Base UoM=PC, Net Weight Base UoM=200.000, EAN Category=, =, Alternative UoMs: 1=, Denominator =,                                              Alt UoM=,                                             Numerator=,                  Lower Level Unit Of Measure=,                           Calculated Net Weight=,                                           Gross weight=,                                   Unit of Weight=,                                           EAN/UPC=,                                         EAN Category=,                     Determine EAN Check Digit=,                              Additional EANS exist=, Alternative UoMs: 2=, Alternative UoMs: 3=, Alternative UoMs: 4=, Alternative UoMs: 5=, Alternative UoMs: 6=, Alternative UoMs: 7=, Add EAN Units: 1=,                      Alternative unit of measure=,                                                Main EAN=,                                               EAN/UPC=,                                            EAN Category=,                      Determine EAN check digit=, Add EAN Units: 2=, Add EAN Units: 3=, Warehouseing, Purchasing and Sales:=, Storage Conditions=, Order Unit=, Purchasing Value Key=, Variable OUN=, Transportation Group=, JDE:=, Stocking Type Global=, Bulk/Packed Flag=, Sales Price Level=, Commitment Method=, UoM - Primary=, UoM - Secondary=, UoM - Pricing=, UoM - Production=, Round To Whole Number=, Line Type=, Inventory Cost Level=, Purchase Price Level=, Standard UoM=, UoM - Purchasing=, UoM - Shipping=, UoM - Component=, Navision:=, Type=, Inventory Value Zero=, Price Profit Calculation=, Product Group Code=, Attachment:=, Document Name=, Process Information:=, All Comments=})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == //*[text()=&apos;KG&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.79.141.147&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:7952/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 67e847f5-e7b9-4502-8d29-7ac59ba3c598
+*** Element info: {Using=xpath, value=//*[text()=&apos;KG&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.MaterialPage.unitOfWeightSelectionTest(MaterialPage.java:320)
+	at com.mendix.test.MaterialChangeScript.Material_Create_Fill_In_Data_Reference(MaterialChangeScript.java:80)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_RequestId_Generation">
+                  </a> <!-- Material_RequestId_Generation -->
+                  <span class="method-name">Material_RequestId_Generation</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with xpath == .//*[@class=&apos;glyphicon glyphicon-flash&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.79.141.147&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:7952/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 67e847f5-e7b9-4502-8d29-7ac59ba3c598
+*** Element info: {Using=xpath, value=.//*[@class=&apos;glyphicon glyphicon-flash&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.MaterialPage.clickLocalAction(MaterialPage.java:422)
+	at com.mendix.test.MaterialChangeScript.Material_RequestId_Generation(MaterialChangeScript.java:49)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Change_Material-class-failed -->
+          <div class="suite-Change_Material-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mendix.test.MaterialScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">
+                  </a> <!-- Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...) -->
+                  <span class="method-name">Process_Information_Check</span>
+                  <span class="parameters">({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;IBM286-PBD1Z5V&apos;, ip: &apos;9.79.141.147&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.ProceesInfoPage$1.apply(ProceesInfoPage.java:85)
+	at com.mendix.page.ProceesInfoPage$1.apply(ProceesInfoPage.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
+	at com.mendix.page.ProceesInfoPage.reqIdSearch_Global(ProceesInfoPage.java:94)
+	at com.mendix.test.MaterialScript.Process_Information_Check(MaterialScript.java:57)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Change_Material-class-failed -->
+          <div class="suite-Change_Material-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mendix.test.MaterialChangeScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Reference_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">
+                  </a> <!-- Material_Create_Reference_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...) -->
+                  <span class="method-name">Material_Create_Reference_Syndication_Check</span>
+                  <span class="parameters">({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Change_Material-class-passed -->
+          <div class="suite-Change_Material-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mendix.test.MaterialScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Review_Global_Data_Approve_GDA({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">
+                  </a> <!-- Material_Create_Review_Global_Data_Approve_GDA({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...) -->
+                  <span class="method-name">Material_Create_Review_Global_Data_Approve_GDA</span>
+                  <span class="parameters">({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Material_Create_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">
+                  </a> <!-- Material_Create_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...) -->
+                  <span class="method-name">Material_Create_Syndication_Check</span>
+                  <span class="parameters">({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)">
+                  </a> <!-- Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...) -->
+                  <span class="method-name">Process_Information_Check</span>
+                  <span class="parameters">({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Change_Material-class-passed -->
+          <div class="suite-Change_Material-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mendix.test.LoginScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAsGDA">
+                  </a> <!-- loginAsGDA -->
+                  <span class="method-name">loginAsGDA</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAsLDR">
+                  </a> <!-- loginAsLDR -->
+                  <span class="method-name">loginAsLDR</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAsLDR">
+                  </a> <!-- loginAsLDR -->
+                  <span class="method-name">loginAsLDR</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openBrowser">
+                  </a> <!-- openBrowser -->
+                  <span class="method-name">openBrowser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openBrowser">
+                  </a> <!-- openBrowser -->
+                  <span class="method-name">openBrowser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="openBrowser">
+                  </a> <!-- openBrowser -->
+                  <span class="method-name">openBrowser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tasKill">
+                  </a> <!-- tasKill -->
+                  <span class="method-name">tasKill</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Change_Material-class-passed -->
+        </div> <!-- panel Change_Material -->
+        <div panel-name="test-xml-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Mendix_Workspace\Mendix\suite\scenarios\CreatewithRef.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Change Material&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HeiPort_Login_LDR&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.LoginScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;tasKill&quot;/&gt;
+          &lt;include name=&quot;openBrowser&quot;/&gt;
+          &lt;include name=&quot;loginAsLDR&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.LoginScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- HeiPort_Login_LDR --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_Change_Check&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialChangeScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_Create_Reference_Syndication_Check&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialChangeScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_Change_Check --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_Change_Fill_In_Data&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialChangeScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_Create_Fill_In_Data_Reference&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialChangeScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_Change_Fill_In_Data --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_RequestId_Generation&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialChangeScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_RequestId_Generation&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialChangeScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_RequestId_Generation --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Process_Information_Check&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Process_Information_Check&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Process_Information_Check --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HeiPort_Login_GDA&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.LoginScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;openBrowser&quot;/&gt;
+          &lt;include name=&quot;loginAsGDA&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.LoginScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- HeiPort_Login_GDA --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_Change_Review_Global_Data_Approve_GDA&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_Create_Review_Global_Data_Approve_GDA&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_Change_Review_Global_Data_Approve_GDA --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Process_Information_Check_Syndication&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Process_Information_Check&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Process_Information_Check_Syndication --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;HeiPort_Login_LDR_Syndication&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.LoginScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;openBrowser&quot;/&gt;
+          &lt;include name=&quot;loginAsLDR&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.LoginScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- HeiPort_Login_LDR_Syndication --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Material_Change_Syndication_Check&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mendix.test.MaterialScript&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;Material_Create_Syndication_Check&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.mendix.test.MaterialScript --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Material_Change_Syndication_Check --&gt;
+&lt;/suite&gt; &lt;!-- Change Material --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Change Material</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">HeiPort_Login_LDR (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_Change_Check (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_Change_Fill_In_Data (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_RequestId_Generation (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Process_Information_Check (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">HeiPort_Login_GDA (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_Change_Review_Global_Data_Approve_GDA (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Process_Information_Check_Syndication (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">HeiPort_Login_LDR_Syndication (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Material_Change_Syndication_Check (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Change Material</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Change Material</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Change_Material');
+function tableData_Change_Material() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(14);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Material_Create_Fill_In_Data_Reference')
+data.setCell(0, 2, 'com.mendix.test.MaterialChangeScript')
+data.setCell(0, 3, 129306);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Material_Create_Reference_Syndication_Check')
+data.setCell(1, 2, 'com.mendix.test.MaterialChangeScript')
+data.setCell(1, 3, 63355);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Material_Create_Syndication_Check')
+data.setCell(2, 2, 'com.mendix.test.MaterialScript')
+data.setCell(2, 3, 46180);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Material_Create_Review_Global_Data_Approve_GDA')
+data.setCell(3, 2, 'com.mendix.test.MaterialScript')
+data.setCell(3, 3, 38961);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Process_Information_Check')
+data.setCell(4, 2, 'com.mendix.test.MaterialScript')
+data.setCell(4, 3, 32824);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'loginAsLDR')
+data.setCell(5, 2, 'com.mendix.test.LoginScript')
+data.setCell(5, 3, 5288);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'loginAsLDR')
+data.setCell(6, 2, 'com.mendix.test.LoginScript')
+data.setCell(6, 3, 5278);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'loginAsGDA')
+data.setCell(7, 2, 'com.mendix.test.LoginScript')
+data.setCell(7, 3, 5106);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'openBrowser')
+data.setCell(8, 2, 'com.mendix.test.LoginScript')
+data.setCell(8, 3, 3780);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Process_Information_Check')
+data.setCell(9, 2, 'com.mendix.test.MaterialScript')
+data.setCell(9, 3, 3015);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'openBrowser')
+data.setCell(10, 2, 'com.mendix.test.LoginScript')
+data.setCell(10, 3, 2760);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'openBrowser')
+data.setCell(11, 2, 'com.mendix.test.LoginScript')
+data.setCell(11, 3, 2649);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'Material_RequestId_Generation')
+data.setCell(12, 2, 'com.mendix.test.MaterialChangeScript')
+data.setCell(12, 3, 1322);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'tasKill')
+data.setCell(13, 2, 'com.mendix.test.LoginScript')
+data.setCell(13, 3, 44);
+window.suiteTableData['Change_Material']= { tableData: data, tableDiv: 'times-div-Change_Material'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-Change_Material">
+              </div> <!-- times-div-Change_Material -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Change Material</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">60 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mendix.test.MaterialChangeScript</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Material_RequestId_Generation</span>
+                <br/>
+                <span class="ignored-method-name">Material_RequestId_Generation</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Reference_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Reference_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Reference</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Change</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Change</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Reference</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Change</span>
+                <br/>
+                <span class="ignored-method-name">Material_Change_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Change_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Change_Syndication_Check</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mendix.test.MaterialScript</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GBDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GBDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GBDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GBDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Save_as_draft</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Save_as_draft</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Save_as_draft</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data_Save_as_draft</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_in_Data_Save_as_Draft_Submit</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_in_Data_Save_as_Draft_Submit</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_in_Data_Save_as_Draft_Submit</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_in_Data_Save_as_Draft_Submit</span>
+                <br/>
+                <span class="ignored-method-name">Process_Information_Check</span>
+                <br/>
+                <span class="ignored-method-name">Process_Information_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Questionnaire</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Questionnaire</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Syndication_Check</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Questionnaire</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Questionnaire</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Review_Global_Data_Approve_GDA</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <br/>
+                <span class="ignored-method-name">Material_Create_Fill_In_Data</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.mendix.test.LoginScript</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginAsGDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLBDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLBDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsGDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLBDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLDS</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLDS</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLDS</span>
+                <br/>
+                <span class="ignored-method-name">loginAsGBDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsGBDA</span>
+                <br/>
+                <span class="ignored-method-name">loginAsGBDA</span>
+                <br/>
+                <span class="ignored-method-name">tasKill</span>
+                <br/>
+                <span class="ignored-method-name">tasKill</span>
+                <br/>
+                <span class="ignored-method-name">loginAsLDR</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDR</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDR</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDR</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDS</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDS</span>
+                <br/>
+                <span class="ignored-method-name">loginAsVendorLDS</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Change_Material" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.LoginScript</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setup(org.testng.TestRunner@43ecfeb5)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">tasKill</span>
+                <span class="method-start">90 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">136 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginAsLDR</span>
+                <span class="method-start">3917 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.MaterialChangeScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Material_Create_Reference_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</span>
+                <span class="method-start">9693 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Material_Create_Fill_In_Data_Reference({GLOBAL FIELDS=BE001OC, Execute=Y, Fields=EN, Material Description:=Lens Non Illuminated 82mm MAES 2...)</span>
+                <span class="method-start">73149 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Material_RequestId_Generation</span>
+                <span class="method-start">202483 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.MaterialScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</span>
+                <span class="method-start">203863 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.LoginScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">236708 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginAsGDA</span>
+                <span class="method-start">239469 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.MaterialScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Material_Create_Review_Global_Data_Approve_GDA({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</span>
+                <span class="method-start">244605 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Process_Information_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</span>
+                <span class="method-start">283621 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.LoginScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">openBrowser</span>
+                <span class="method-start">286658 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginAsLDR</span>
+                <span class="method-start">289308 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mendix.test.MaterialScript</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">Material_Create_Syndication_Check({Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=1393517, GlobalId=401708, MaterialNumber...)</span>
+                <span class="method-start">294621 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

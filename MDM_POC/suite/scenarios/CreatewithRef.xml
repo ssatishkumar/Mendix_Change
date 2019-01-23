@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Change Material">
+		<test name="HeiPort_Login_LDR">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+				    <include name="tasKill" />
+					<include name="openBrowser" />
+					<include name="loginAsLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Change_Check">
+		<classes>
+			<class name="com.mendix.test.MaterialChangeScript">
+				<methods>
+					<include name="Material_Create_Reference_Syndication_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	 <test name="Material_Change_Fill_In_Data">
+		<classes>
+			<class name="com.mendix.test.MaterialChangeScript">
+				<methods>
+					<include name="Material_Create_Fill_In_Data_Reference" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_RequestId_Generation">
+		<classes>
+			<class name="com.mendix.test.MaterialChangeScript">
+				<methods>
+					<include name="Material_RequestId_Generation" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Process_Information_Check">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_GDA">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsGDA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Change_Review_Global_Data_Approve_GDA">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include
+						name="Material_Create_Review_Global_Data_Approve_GDA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Process_Information_Check_Syndication">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_LDR_Syndication">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Change_Syndication_Check">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include name="Material_Create_Syndication_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
+

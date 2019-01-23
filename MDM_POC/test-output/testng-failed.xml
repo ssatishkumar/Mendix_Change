@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Change Material]">
+  <test thread-count="5" name="Material_Change_Fill_In_Data(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialChangeScript">
+        <methods>
+          <include name="Material_Create_Fill_In_Data_Reference" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialChangeScript -->
+    </classes>
+  </test> <!-- Material_Change_Fill_In_Data(failed) -->
+  <test thread-count="5" name="Material_RequestId_Generation(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialChangeScript">
+        <methods>
+          <include name="Material_RequestId_Generation"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialChangeScript -->
+    </classes>
+  </test> <!-- Material_RequestId_Generation(failed) -->
+  <test thread-count="5" name="Process_Information_Check_Syndication(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Process_Information_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Process_Information_Check_Syndication(failed) -->
+</suite> <!-- Failed suite [Change Material] -->

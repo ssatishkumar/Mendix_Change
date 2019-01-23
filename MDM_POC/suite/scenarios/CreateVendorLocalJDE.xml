@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create Vendor with JDE">
+	<test name="HeiPort_Login_LDR">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="tasKill" />
+					<include name="openBrowser" />
+					<include name="loginAsVendorLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Fill in questionnaire">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Questionnaire" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Data">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Data_JDE" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Data_JDE">
+		<classes>
+			<class name="com.mendix.test.Vendor_JDE_Script">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Data_JDE_Local_Purchasing" />
+					<include name="Vendor_Create_Fill_In_Data_JDE_Local_Finance" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_LDR_submit">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsLDR" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Fill_in_Data_Save_as_Draft_Submit">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include
+						name="Material_Create_Fill_in_Data_Save_as_Draft_Submit" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Process_Information_Check_submit">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="HeiPort_Login_GDA">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsGDA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Material_Create_Review_Global_Data_Approve_GDA">
+		<classes>
+			<class name="com.mendix.test.MaterialScript">
+				<methods>
+					<include
+						name="Material_Create_Review_Global_Data_Approve_GDA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
+

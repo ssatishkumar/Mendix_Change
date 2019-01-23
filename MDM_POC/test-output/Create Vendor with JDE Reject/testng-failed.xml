@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Create Vendor with JDE Reject]">
+  <test thread-count="5" name="Vendor_Create_Review_Global_Data_Reject_Discard_LDR(failed)">
+    <classes>
+      <class name="com.mendix.test.Vendor_JDE_Script">
+        <methods>
+          <include name="Vendor_Create_Review_Global_Data_Reject_Discard_LDR" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.Vendor_JDE_Script -->
+    </classes>
+  </test> <!-- Vendor_Create_Review_Global_Data_Reject_Discard_LDR(failed) -->
+</suite> <!-- Failed suite [Create Vendor with JDE Reject] -->

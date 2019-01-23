@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Create Material with JDE]">
+  <test thread-count="5" name="Material_Create_Fill_In_Data_Local_JDE(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialJDEScript">
+        <methods>
+          <include name="Material_Create_Fill_In_Data_JDE_Planning"/>
+          <include name="Material_Create_Fill_In_Data_JDE_Site"/>
+          <include name="Material_Create_Fill_In_Data_JDE_Finance"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialJDEScript -->
+    </classes>
+  </test> <!-- Material_Create_Fill_In_Data_Local_JDE(failed) -->
+</suite> <!-- Failed suite [Create Material with JDE] -->

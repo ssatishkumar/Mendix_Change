@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Material_Create_Review_Global_Data_Approve_GBDA" invocation-numbers="0 1"/>
+          <include name="Process_Information_Check" invocation-numbers="0 1"/>
+          <include name="Material_Create_Fill_In_Data_Save_as_draft" invocation-numbers="0"/>
+          <include name="Material_Create_Fill_In_Data" invocation-numbers="0"/>
+          <include name="Material_Create_Fill_In_Questionnaire"/>
+          <include name="Material_Create_Fill_in_Data_Save_as_Draft_Submit"/>
+          <include name="Material_Create_Review_Global_Data_Approve_GDA" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
