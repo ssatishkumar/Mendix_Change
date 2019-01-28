@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Create Material with Draft]">
+  <test thread-count="5" name="Material_Create_Syndication_Check(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Material_Create_Syndication_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Material_Create_Syndication_Check(failed) -->
+</suite> <!-- Failed suite [Create Material with Draft] -->

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="5" ignored="91" total="102" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Create Vendor Happy flow - with disable Local and Bank Request(SAP)" duration-ms="349971" started-at="2019-01-28T10:36:53Z" finished-at="2019-01-28T10:42:43Z">
+    <groups>
+    </groups>
+    <test name="HeiPort_Login_LDR" duration-ms="2829" started-at="2019-01-28T10:36:53Z" finished-at="2019-01-28T10:36:55Z">
+      <class name="com.mendix.test.LoginScript">
+        <test-method status="PASS" signature="tasKill()[pri:0, instance:com.mendix.test.LoginScript@2781e022]" name="tasKill" duration-ms="31" started-at="2019-01-28T10:36:53Z" finished-at="2019-01-28T10:36:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tasKill -->
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@2781e022]" name="openBrowser" duration-ms="2783" started-at="2019-01-28T10:36:53Z" finished-at="2019-01-28T10:36:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+      </class> <!-- com.mendix.test.LoginScript -->
+    </test> <!-- HeiPort_Login_LDR -->
+    <test name="Vendor_Create_Fill_In_Questionnaire" duration-ms="41326" started-at="2019-01-28T10:36:56Z" finished-at="2019-01-28T10:37:37Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="FAIL" signature="Vendor_Create_Fill_In_Questionnaire()[pri:0, instance:com.mendix.test.VendorScript@1a8a8f7c]" name="Vendor_Create_Fill_In_Questionnaire" duration-ms="41325" started-at="2019-01-28T10:36:56Z" finished-at="2019-01-28T10:37:37Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.mendix.test.VendorScript.Vendor_Create_Fill_In_Questionnaire(VendorScript.java:22)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Vendor_Create_Fill_In_Questionnaire -->
+      </class> <!-- com.mendix.test.VendorScript -->
+    </test> <!-- Vendor_Create_Fill_In_Questionnaire -->
+    <test name="Vendor_Create_Fill_In_Data" duration-ms="4" started-at="2019-01-28T10:37:37Z" finished-at="2019-01-28T10:37:37Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="FAIL" signature="Vendor_Create_Fill_In_Data(java.util.Map)[pri:0, instance:com.mendix.test.VendorScript@36b4cef0]" name="Vendor_Create_Fill_In_Data" duration-ms="0" started-at="2019-01-28T10:37:37Z" data-provider="Vendor_Create_Global_Disable_Bank_and_LocalData" finished-at="2019-01-28T10:37:37Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method public void com.mendix.test.VendorScript.Vendor_Create_Fill_In_Data(java.util.Map) throws java.lang.InterruptedException,java.io.FileNotFoundException,java.io.IOException,java.awt.AWTException requires a @DataProvider named : Vendor_Create_Global_Disable_Bank_and_LocalData in class com.mendix.util.DataProviderUtil$staticProviderClass]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method public void com.mendix.test.VendorScript.Vendor_Create_Fill_In_Data(java.util.Map) throws java.lang.InterruptedException,java.io.FileNotFoundException,java.io.IOException,java.awt.AWTException requires a @DataProvider named : Vendor_Create_Global_Disable_Bank_and_LocalData in class com.mendix.util.DataProviderUtil$staticProviderClass
+at org.testng.internal.Parameters.findDataProvider(Parameters.java:513)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:691)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Vendor_Create_Fill_In_Data -->
+      </class> <!-- com.mendix.test.VendorScript -->
+    </test> <!-- Vendor_Create_Fill_In_Data -->
+    <test name="Process_Information_Check GDA" duration-ms="32640" started-at="2019-01-28T10:37:37Z" finished-at="2019-01-28T10:38:10Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="FAIL" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.VendorScript@1d8d30f7]" name="Process_Information_Check" duration-ms="32180" started-at="2019-01-28T10:37:37Z" data-provider="Process_Information_Check" finished-at="2019-01-28T10:38:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:30983
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:30983
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at com.mendix.page.ProceesInfoPage.reqIdSearch_Global(ProceesInfoPage.java:116)
+at com.mendix.test.VendorScript.Process_Information_Check(VendorScript.java:104)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:30983
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:242)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
+... 52 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Information_Check -->
+      </class> <!-- com.mendix.test.VendorScript -->
+    </test> <!-- Process_Information_Check GDA -->
+    <test name="HeiPort_Login_GDA" duration-ms="12212" started-at="2019-01-28T10:38:10Z" finished-at="2019-01-28T10:38:22Z">
+      <class name="com.mendix.test.LoginScript">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@5bb21b69]" name="openBrowser" duration-ms="2244" started-at="2019-01-28T10:38:10Z" finished-at="2019-01-28T10:38:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="loginAsGDA()[pri:0, instance:com.mendix.test.LoginScript@5bb21b69]" name="loginAsGDA" duration-ms="9953" started-at="2019-01-28T10:38:12Z" finished-at="2019-01-28T10:38:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsGDA -->
+      </class> <!-- com.mendix.test.LoginScript -->
+    </test> <!-- HeiPort_Login_GDA -->
+    <test name="Vendor_Create_Review_Global_Data_Approve_GDA" duration-ms="81266" started-at="2019-01-28T10:38:22Z" finished-at="2019-01-28T10:39:43Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="PASS" signature="Vendor_Create_Review_Global_Data_Approve_GDA(java.util.Map)[pri:0, instance:com.mendix.test.VendorScript@4abdb505]" name="Vendor_Create_Review_Global_Data_Approve_GDA" duration-ms="81233" started-at="2019-01-28T10:38:22Z" data-provider="Process_Information_Check" finished-at="2019-01-28T10:39:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Vendor_Create_Review_Global_Data_Approve_GDA -->
+      </class> <!-- com.mendix.test.VendorScript -->
+    </test> <!-- Vendor_Create_Review_Global_Data_Approve_GDA -->
+    <test name="Process_Information_Chec_Approvedk" duration-ms="40155" started-at="2019-01-28T10:39:43Z" finished-at="2019-01-28T10:40:23Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="FAIL" signature="Process_Information_Check(java.util.Map)[pri:0, instance:com.mendix.test.VendorScript@45820e51]" name="Process_Information_Check" duration-ms="40094" started-at="2019-01-28T10:39:43Z" data-provider="Process_Information_Check" finished-at="2019-01-28T10:40:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[Currently focused window has been closed.
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:23345/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 84c35850-3451-4dfb-b00e-e036bbde3d0f
+*** Element info: {Using=xpath, value=.//*[@class='glyphicon glyphicon-search']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: Currently focused window has been closed.
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:23345/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 84c35850-3451-4dfb-b00e-e036bbde3d0f
+*** Element info: {Using=xpath, value=.//*[@class='glyphicon glyphicon-search']}
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at com.mendix.page.ProceesInfoPage.reqIdSearch_Global(ProceesInfoPage.java:116)
+at com.mendix.test.VendorScript.Process_Information_Check(VendorScript.java:104)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Process_Information_Check -->
+      </class> <!-- com.mendix.test.VendorScript -->
+    </test> <!-- Process_Information_Chec_Approvedk -->
+    <test name="HeiPort_Login_LDR_2" duration-ms="2813" started-at="2019-01-28T10:40:23Z" finished-at="2019-01-28T10:40:26Z">
+      <class name="com.mendix.test.LoginScript">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.mendix.test.LoginScript@12cdcf4]" name="openBrowser" duration-ms="2813" started-at="2019-01-28T10:40:23Z" finished-at="2019-01-28T10:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+      </class> <!-- com.mendix.test.LoginScript -->
+    </test> <!-- HeiPort_Login_LDR_2 -->
+    <test name="Vendor_Create_Syndication_Check" duration-ms="136366" started-at="2019-01-28T10:40:26Z" finished-at="2019-01-28T10:42:43Z">
+      <class name="com.mendix.test.VendorScript">
+        <test-method status="FAIL" signature="Vendor_Create_Syndication_Check(java.util.Map)[pri:0, instance:com.mendix.test.VendorScript@7b69c6ba]" name="Vendor_Create_Syndication_Check" duration-ms="136335" started-at="2019-01-28T10:40:26Z" data-provider="Process_Information_Check" finished-at="2019-01-28T10:42:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[No window found
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:4143/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: dd42132d-bfbd-4e2a-91b8-fcdf9fe1b70a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: No window found
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:13:22.693Z'
+System info: host: 'DESKTOP-8D4LHVL', ip: '9.251.112.7', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:4143/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: dd42132d-bfbd-4e2a-91b8-fcdf9fe1b70a
+at sun.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:899)
+at com.mendix.page.VendorPage.advancedSearch(VendorPage.java:663)
+at com.mendix.test.VendorScript.Vendor_Create_Syndication_Check(VendorScript.java:157)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Vendor_Create_Syndication_Check -->
+      </class> <!-- com.mendix.test.VendorScript -->
+      <class name="com.mendix.test.LoginScript">
+        <test-method status="PASS" signature="setup(org.testng.ITestContext)[pri:0, instance:com.mendix.test.LoginScript@12cdcf4]" name="setup" is-config="true" duration-ms="157" started-at="2019-01-28T10:36:52Z" finished-at="2019-01-28T10:36:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@63300c4b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- com.mendix.test.LoginScript -->
+    </test> <!-- Vendor_Create_Syndication_Check -->
+  </suite> <!-- Create Vendor Happy flow - with disable Local and Bank Request(SAP) -->
+</testng-results>

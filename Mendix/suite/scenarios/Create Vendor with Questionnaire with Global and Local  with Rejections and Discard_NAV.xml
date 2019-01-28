@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Create Vendor with Questionnaire with Global and Local_NAV">
+ 	 <test name="HeiPort_Login_LDR">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="tasKill" />
+					<include name="openBrowser" />
+					<include name="loginAsLDRVendor" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Questionnaire">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Questionnaire" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Vendor_Create_Fill_In_Data_Global_Local_NAV">
+		<classes>
+			<class name="com.mendix.test.VendorScript_NAV">
+				<methods>
+					<include name="Vendor_Create_Fill_In_Data_Global_Local_NAV" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	  <test name="Process_Information_Check LDR">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	<test name="HeiPort_Login_LDS_Reject">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsLDSVendor" />
+				</methods>
+			</class>
+		</classes>
+	</test>  
+		<test name="Vendor_Create_Review_Local_Data_Reject_LDS">
+		<classes>
+			<class name="com.mendix.test.VendorScript_NAV">
+				<methods>
+					<include name="Vendor_Create_Review_Local_Data_Reject_LDS" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Process_Information_Check_Reject_LDS">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>		
+	</test> 
+	<test name="HeiPort_Login_GDA_Reject">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsGDA" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+ 	<test name="Vendor_Create_Review_Global_Data_Reject_GDA">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Vendor_Create_Review_Global_Data_Reject_GDA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="Process_Information_Check_Reject_GDA">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Process_Information_Check" />
+				</methods>
+			</class>
+		</classes>		
+	</test>
+	<test name="HeiPort_Login_LDR_Discard">
+		<classes>
+			<class name="com.mendix.test.LoginScript">
+				<methods>
+					<include name="openBrowser" />
+					<include name="loginAsLDRVendor" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Create_Vendor_Rejections_with_Discard">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Create_Vendor_Rejections_with_Discard" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Process_Information_Check_Discard">
+		<classes>
+			<class name="com.mendix.test.VendorScript">
+				<methods>
+					<include name="Process_Information_Check_Discard" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
+
+
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Create Material]">
+  <test thread-count="5" name="Material_Validate_Submit_Check(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Material_Create_Validate_Submit_Check"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Material_Validate_Submit_Check(failed) -->
+  <test thread-count="5" name="Process_Information_Check(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Process_Information_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Process_Information_Check(failed) -->
+  <test thread-count="5" name="HeiPort_Login_GDA(failed)">
+    <classes>
+      <class name="com.mendix.test.LoginScript">
+        <methods>
+          <include name="loginAsApprover" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.mendix.test.LoginScript -->
+    </classes>
+  </test> <!-- HeiPort_Login_GDA(failed) -->
+  <test thread-count="5" name="Material_Create_Review_Global_Data_Approve_GDA(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Material_Create_Review_Global_Data_Approve_GDA" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Material_Create_Review_Global_Data_Approve_GDA(failed) -->
+  <test thread-count="5" name="Process_Information_Check_Syndication(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Process_Information_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Process_Information_Check_Syndication(failed) -->
+  <test thread-count="5" name="Material_Create_Syndication_Check(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Material_Create_Syndication_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Material_Create_Syndication_Check(failed) -->
+</suite> <!-- Failed suite [Create Material] -->

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Create Vendor Happy flow - with disable Local and Bank Request(SAP)</th></tr>
+<tr><td><a href="#t0">HeiPort_Login_LDR</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">2,829</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Vendor_Create_Fill_In_Questionnaire</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,326</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Vendor_Create_Fill_In_Data</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Process_Information_Check GDA</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,640</td><td></td><td></td></tr>
+<tr><td><a href="#t4">HeiPort_Login_GDA</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">12,212</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t5">Vendor_Create_Review_Global_Data_Approve_GDA</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">81,266</td><td></td><td></td></tr>
+<tr><td><a href="#t6">Process_Information_Chec_Approvedk</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">40,155</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t7">HeiPort_Login_LDR_2</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">2,813</td><td></td><td></td></tr>
+<tr><td><a href="#t8">Vendor_Create_Syndication_Check</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">136,366</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num attn">5</th><th class="num">349,611</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Create Vendor Happy flow - with disable Local and Bank Request(SAP)</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HeiPort_Login_LDR &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.mendix.test.LoginScript</td><td><a href="#m0">openBrowser</a></td><td rowspan="1">1548671813194</td><td rowspan="1">2783</td></tr><tr class="passedeven"><td><a href="#m1">tasKill</a></td><td rowspan="1">1548671813148</td><td rowspan="1">31</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Vendor_Create_Fill_In_Questionnaire &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m2">Vendor_Create_Fill_In_Questionnaire</a></td><td rowspan="1">1548671816009</td><td rowspan="1">41325</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Vendor_Create_Fill_In_Data &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m3">Vendor_Create_Fill_In_Data</a></td><td rowspan="1">1548671857364</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Process_Information_Check GDA &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m4">Process_Information_Check</a></td><td rowspan="1">1548671857852</td><td rowspan="1">32180</td></tr></tbody>
+<tbody id="t4"><tr><th colspan="4">HeiPort_Login_GDA &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.mendix.test.LoginScript</td><td><a href="#m5">loginAsGDA</a></td><td rowspan="1">1548671892306</td><td rowspan="1">9953</td></tr><tr class="passedeven"><td><a href="#m6">openBrowser</a></td><td rowspan="1">1548671890062</td><td rowspan="1">2244</td></tr></tbody>
+<tbody id="t5"><tr><th colspan="4">Vendor_Create_Review_Global_Data_Approve_GDA &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m7">Vendor_Create_Review_Global_Data_Approve_GDA</a></td><td rowspan="1">1548671902330</td><td rowspan="1">81233</td></tr></tbody>
+<tbody id="t6"><tr><th colspan="4">Process_Information_Chec_Approvedk &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m8">Process_Information_Check</a></td><td rowspan="1">1548671983668</td><td rowspan="1">40094</td></tr></tbody>
+<tbody id="t7"><tr><th colspan="4">HeiPort_Login_LDR_2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mendix.test.LoginScript</td><td><a href="#m9">openBrowser</a></td><td rowspan="1">1548672023829</td><td rowspan="1">2813</td></tr></tbody>
+<tbody id="t8"><tr><th colspan="4">Vendor_Create_Syndication_Check &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mendix.test.VendorScript</td><td><a href="#m10">Vendor_Create_Syndication_Check</a></td><td rowspan="1">1548672026782</td><td rowspan="1">136335</td></tr></tbody>
+</table>
+<h2>HeiPort_Login_LDR</h2><h3 id="m0">com.mendix.test.LoginScript#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.mendix.test.LoginScript#tasKill</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Vendor_Create_Fill_In_Questionnaire</h2><h3 id="m2">com.mendix.test.VendorScript#Vendor_Create_Fill_In_Questionnaire</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at com.mendix.test.VendorScript.Vendor_Create_Fill_In_Questionnaire(VendorScript.java:22)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Vendor_Create_Fill_In_Data</h2><h3 id="m3">com.mendix.test.VendorScript#Vendor_Create_Fill_In_Data</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Method public void com.mendix.test.VendorScript.Vendor_Create_Fill_In_Data(java.util.Map) throws java.lang.InterruptedException,java.io.FileNotFoundException,java.io.IOException,java.awt.AWTException requires a @DataProvider named : Vendor_Create_Global_Disable_Bank_and_LocalData in class com.mendix.util.DataProviderUtil$staticProviderClass
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Process_Information_Check GDA</h2><h3 id="m4">com.mendix.test.VendorScript#Process_Information_Check</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:30983
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;DESKTOP-8D4LHVL&apos;, ip: &apos;9.251.112.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.ProceesInfoPage.reqIdSearch_Global(ProceesInfoPage.java:116)
+	at com.mendix.test.VendorScript.Process_Information_Check(VendorScript.java:104)
+Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:30983
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:242)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:160)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	... 32 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:240)
+	... 52 more
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>HeiPort_Login_GDA</h2><h3 id="m5">com.mendix.test.LoginScript#loginAsGDA</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.mendix.test.LoginScript#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Vendor_Create_Review_Global_Data_Approve_GDA</h2><h3 id="m7">com.mendix.test.VendorScript#Vendor_Create_Review_Global_Data_Approve_GDA</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Process_Information_Chec_Approvedk</h2><h3 id="m8">com.mendix.test.VendorScript#Process_Information_Check</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: Currently focused window has been closed.
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;DESKTOP-8D4LHVL&apos;, ip: &apos;9.251.112.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:23345/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 84c35850-3451-4dfb-b00e-e036bbde3d0f
+*** Element info: {Using=xpath, value=.//*[@class=&apos;glyphicon glyphicon-search&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.mendix.page.ProceesInfoPage.reqIdSearch_Global(ProceesInfoPage.java:116)
+	at com.mendix.test.VendorScript.Process_Information_Check(VendorScript.java:104)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>HeiPort_Login_LDR_2</h2><h3 id="m9">com.mendix.test.LoginScript#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Vendor_Create_Syndication_Check</h2><h3 id="m10">com.mendix.test.VendorScript#Vendor_Create_Syndication_Check</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Iteration=1, Execute=Y, TestCase=CreateMaterial, RequestId=error, GlobalId=410293, MaterialNumber_AH1=, MaterialNumber_PE2=, Status=}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchWindowException: No window found
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:13:22.693Z&apos;
+System info: host: &apos;DESKTOP-8D4LHVL&apos;, ip: &apos;9.251.112.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:4143/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: dd42132d-bfbd-4e2a-91b8-fcdf9fe1b70a
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:899)
+	at com.mendix.page.VendorPage.advancedSearch(VendorPage.java:663)
+	at com.mendix.test.VendorScript.Vendor_Create_Syndication_Check(VendorScript.java:157)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
