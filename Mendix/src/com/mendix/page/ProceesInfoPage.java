@@ -2,7 +2,10 @@ package com.mendix.page;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.function.Function;
 
@@ -72,6 +75,12 @@ public class ProceesInfoPage {
 
 	@FindBy(how=How.XPATH, using="(//*[@class='mx-dateinput-input-wrapper'])[1]")
 	WebElement txtboxRequestedDate;
+	
+	@FindBy(how=How.XPATH, using="//*[@class='form-control mx-dateinput-input']")
+	WebElement txtBoxRequestedStrtDate; 
+	
+	
+	
 	/**
 	 * Enter UserName.
 	 * Enter Password
@@ -150,43 +159,19 @@ public class ProceesInfoPage {
 
 	public boolean processInfoSearch() {
 		
-		Sync.waitForSeconds(Constants.WAIT_5);
-		WebElement waitElement = null;
-		FluentWait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
-		        .withTimeout(Duration.ofMinutes(3))
-		        .pollingEvery(Duration.ofSeconds(600))
-		        .ignoring(NoSuchElementException.class)
-		        .ignoring(TimeoutException.class);
-		 
-		//First checking to see if the loading indicator is found
-		// we catch and throw no exception here in case they aren't ignored
-		try {
-		  waitElement = fwait.until(new Function<WebDriver, WebElement>() {
-		   public WebElement apply(WebDriver driver) {
-		      return driver.findElement(By.xpath(".//*[@id='mxui_widget_Progress_0']"));
-		   }
-		 });
-		    } catch (Exception e) {
-		   }
-		 
-		//checking if loading indicator was found and if so we wait for it to
-		//disappear
-		  if (waitElement!=null) {
-		      WebDriverWait wait = new WebDriverWait(driver, 60);
-		      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(("//a[contains(text(),'Process Information')]")))
-		            );
-		        }
-//		  else {
-//			  WebDriverWait wait = new WebDriverWait(driver, 60);
-//			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(("//a[contains(text(),'Process Information')]"))));
-//			            );
-//		  }
-		  
-
-	/*	Sync.waitForObjectFluent(driver, menuProcessInfo);
-		Sync.waitForSeconds(Constants.WAIT_3);
-		Sync.waitForObjectFluent(driver, menuProcessInfo);*/
+		//Sync.waitForSeconds(Constants.WAIT_5);
+		//Sync.waitForSeconds(Constants.WAIT_5);
+		WebDriverWait wait = new WebDriverWait(driver,100);
+	    WebElement element = wait.until(
+	                        ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Process Information')]")));
+		
+		//WebElement el = driver.findElement(By.xpath("//a[contains(text(),'Process Information')]"));
+		//((JavascriptExecutor)driver).executeScript("arguments[0].click()", el);
+		Sync.waitForObjectFluent(driver, menuProcessInfo);
 		Button.click("Click the Process Info Menu", menuProcessInfo);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		//Sync.waitForSeconds(Constants.WAIT_5);
+		
 		return Button.click("Click the Procees info search menu", menuProcessInfoSearch);
 	}
 
@@ -207,6 +192,14 @@ public class ProceesInfoPage {
 		state=driver.findElement(By.xpath(".//*[text()='"+strValue+"']/../../td[9]/div")).getText();
 //		String status=driver.findElement(By.xpath("//*[text()='Task status']/../../../../../../../table[2]/tbody/tr[1]/td[10]/div" )).getText();
 //		if(status.equalsIgnoreCase("Submitted")) {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+		//get current date time with Date()
+		Date date = new Date();
+
+		// Now format the date
+		String dateFormatted= dateFormat.format(date);
+		Textbox.enterValue("Enter TextBox Value", txtBoxRequestedStrtDate, dateFormatted);
 			driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-search']")).click();
 			Sync.waitForSeconds(Constants.WAIT_3);
 //		}
@@ -219,7 +212,19 @@ public class ProceesInfoPage {
 		movedata(state);
 		return state;
 		
+		
 	}
+	/*public void requestCreated_between(){
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+		//get current date time with Date()
+		Date date = new Date();
+
+		// Now format the date
+		String dateFormatted= dateFormat.format(date);
+		
+		Textbox.enterValue("Enter TextBox Value", txtboxRequestedDatebetween, dateFormatted);
+	}*/
 	public void browserClose() {
 
 		Sync.waitForSeconds(Constants.WAIT_5);

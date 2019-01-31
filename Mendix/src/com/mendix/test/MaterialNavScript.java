@@ -38,7 +38,7 @@ public class MaterialNavScript {
 	public void Material_Create_Fill_In_Data_JDE_Planning(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException, AWTException 
 	{
 		SharedDriver.pageContainer.materialNavPage.enterLocalData();
-		SharedDriver.pageContainer.materialNavPage.enterPlantData(dataMap.get("Plant"));
+    	SharedDriver.pageContainer.materialNavPage.enterPlantData(dataMap.get("Plant"));
 		SharedDriver.pageContainer.materialNavPage.clickEditPlanningData();
 		SharedDriver.pageContainer.materialNavPage.scrolltoRoundingPrecision();
 		SharedDriver.pageContainer.materialNavPage.selectRoundingPrecision(dataMap.get("Rounding Precision"));

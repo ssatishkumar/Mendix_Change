@@ -117,6 +117,7 @@ public class MaterialPage {
 	WebElement btnUnitofWeightSelect;
 
 	@FindBy(how=How.XPATH, using="//*[text()='Base UoM']/../div/button/span")
+
 	WebElement btnBaseUOMSelection;
 
 	@FindBy(how=How.XPATH, using="//label[text()='Commercial Unit']/../../div[2]/input")
@@ -135,7 +136,7 @@ public class MaterialPage {
 	@FindBy(how=How.XPATH, using="//*[text()='Net Weight Base UoM']/../div/input")
 	WebElement txtboxNetWeight;
 
-	@FindBy(how=How.CSS, using="select[id^='mxui_widget_ReferenceSelector_28_input'][class='form-control']")
+	@FindBy(how=How.XPATH, using=".//*[text()='UoM - Primary']/../div/div/select")
 	WebElement slctUOMPrimary;
 
 	@FindBy(how=How.XPATH, using="//*[text()='Validate']")
@@ -184,11 +185,20 @@ public class MaterialPage {
 	@FindBy(how=How.XPATH, using="//button[text()='Search']")
 	WebElement btnReqIdEnter;
 
-	@FindBy(how=How.XPATH, using="//*[text()='Created On']/../../td[4]/div/div/div/input")
+	/*@FindBy(how=How.XPATH, using="//*[text()='Created On']/../../tr[3]td[4]/div/div/div/input")
 	WebElement txtboxCreateOnEnter;
+*/	
+	
+	@FindBy(how=How.XPATH, using="//*[text()='Created On']/../../tr[4]td[4]/div/div/div/input")
+	WebElement txtboxCreateOnEnter;
+	
 
 	@FindBy(how=How.XPATH, using="//button[text()='Get Full Material Data']")
 	WebElement btnFullMaterailData;
+	
+	
+	@FindBy(how=How.XPATH, using="//*[text()='Global ID']/../../td[4]/div/input")
+	WebElement txtboxGlobalIdEnter; 
 	/**
 	 * Enter UserName.
 	 * Enter Password
@@ -282,10 +292,14 @@ public class MaterialPage {
 		Button.click("Local Data", textLocalData);
 		Button.click("Local Actions button", btnLocalActions);
 		Button.click("Disable Local Request", btnDisableLocalRequest);
-		return Button.click("Proceed", btnProceed);
+	    Button.click("Proceed", btnProceed);
+		return Button.click("Local Actions button", btnLocalActions);
 	}
 
 	public boolean materialDescCreate(String strValue) throws InterruptedException {
+		JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"100px\" })");
 		Sync.waitForSeconds(Constants.WAIT_2);
 		Sync.WaitForPageLoad(driver);
 		Sync.waitForObject(driver, btnEditDesc);
@@ -298,7 +312,11 @@ public class MaterialPage {
 	}
 
 	public boolean materialGrpSelectionTest(String strValue) throws InterruptedException {
-
+		
+		
+		JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"50px\" })");
 		Sync.waitForElementToBeClickable(driver, btnMaterialGrpselection);
 		Button.jsclick("Click Material Group Selection button", btnMaterialGrpselection, driver);
 		Sync.waitForObject(driver, "Wait for Material Group Selection Text Box", txtboxMaterialGrpSearch);
@@ -342,13 +360,18 @@ public class MaterialPage {
 	    
 	    
 	    driver.findElement(By.xpath("//*[text()='"+strValue+"']")).click();
+	    Sync.waitForSeconds(Constants.WAIT_5);
 		return Button.click("Click Unit of Weight Select button", btnUnitofWeightSelect);
 
 	}
 
 	public void baseUOMSelectionTest(String strValue) throws InterruptedException {
+		JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollTop: \"60px\" })");
 
 		Sync.waitForElementToBeClickable(driver, btnBaseUOMSelection);
+		Sync.waitForSeconds(Constants.WAIT_5);
 		Button.click("Click Base UOM selection button", btnBaseUOMSelection);
 		Sync.waitForObject(driver, "Wait for Base UOM Text Box Enter" , txtboxBaseUOM);
 		Textbox.enterValue("Enter Base UOM", txtboxBaseUOM, strValue);
@@ -374,20 +397,28 @@ public class MaterialPage {
 
 //		Sync.waitForSeconds(Constants.WAIT_1);
 		Sync.waitForElementToBeClickable(driver, txtboxNetWeight);
+		Textbox.clear("Enter Net Weight", txtboxNetWeight);
 		Button.click("Click Net Weight Enter TextBox", txtboxNetWeight);
 		
 		return Textbox.enterValue("Enter Net Weight", txtboxNetWeight, strValue);
 	}
 
 	public void uomPrimarySelectionTest() throws InterruptedException {
-
-		Sync.waitForObject(driver, "Wait for UOM Primary Select", slctUOMPrimary);
+		/*JavascriptExecutor js;
+		js = (JavascriptExecutor) driver;
+		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"100px\" })");*/
+      
+		//Sync.waitForObject(driver, "Wait for UOM Primary Select", slctUOMPrimary);
+		System.out.println("Click drop down");
+		Sync.waitForSeconds(Constants.WAIT_5);
+		//driver.findElement(By.cssSelector(".//*[text()='UoM - Primary']/../div/div/select")).click();
+		
 		Select dropdownUOM= new Select(slctUOMPrimary);
 		dropdownUOM.selectByIndex(1);
 	}
 
 	public boolean validateTestCreate() {
-
+		Button.click("Local Actions button", btnLocalActions);
 		Sync.waitForSeconds(Constants.WAIT_6);
 		Sync.waitForSeconds(Constants.WAIT_1);
 		return Button.click("Click Validate", btnValidate);
@@ -462,7 +493,7 @@ public class MaterialPage {
 		String[] parts = reqId.split(" ");
 		String Id = parts[2];
 		System.out.println("RequestId is: " + Id);
-		ExcelUtil.excelWrite(Id);
+		ExcelUtil.setCellData("TestPlan","RequestId",5,Id);
 //		Sync.waitForSeconds(Constants.OBJECT_WAIT_TIME);
 		/*System.out.println(btnMsgReqIdOk.getCssValue("color"));
 		Actions actions = new Actions(driver);
@@ -632,6 +663,20 @@ public class MaterialPage {
 		Textbox.enterValue("Enter TextBox Value", txtboxCreateOnEnter, dateFormatted);
 		Button.click("Click Search button", btnReqIdEnter);
 		Sync.waitForSeconds(Constants.WAIT_2);	}
+	public  void getCurrDate() throws InterruptedException {
+
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+		//get current date time with Date()
+		Date date = new Date();
+
+		// Now format the date
+		String dateFormatted= dateFormat.format(date);
+		
+
+		Textbox.enterValue("Enter TextBox Value", txtboxCreateOnEnter, dateFormatted);
+	}
+
 
 	public  String getGlobalId() throws FileNotFoundException, IOException {
 		Sync.waitForSeconds(Constants.WAIT_3);
@@ -686,6 +731,31 @@ public class MaterialPage {
 		ExcelUtil.excelWriteMaterialNum(numMaterial);;
 		return materialNum;
 	}
+	
+	public void globalSearch(String strValue) throws InterruptedException {
+		//Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_3);
+		
+		// Sync.waitForObject(driver, txtboxReqIdEnter);
+
+		//Button.click("Click Search button", btnReqIdEnter);
+		/*Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);
+
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);*/
+		//Sync.waitForSeconds(Constants.WAIT_5);
+
+		Sync.waitForObject(driver, txtboxGlobalIdEnter);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		//Sync.waitForSeconds(Constants.WAIT_3);
+		
+
+		//Textbox.clear("Clear TextBox Value", txtboxGlobalIdEnter);
+		Textbox.enterValue("Enter TextBox Value", txtboxGlobalIdEnter, strValue);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Button.click("Click Search button", btnReqIdEnter);
+		Sync.waitForSeconds(Constants.WAIT_5); } 
 	
 	
 

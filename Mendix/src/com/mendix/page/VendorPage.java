@@ -133,7 +133,9 @@ public class VendorPage {
 	
 	@FindBy(how=How.XPATH, using=".//*[text()='Request complies to all Validations']")
 	WebElement txtValidationMsg;
-	
+
+	@FindBy(how=How.XPATH, using=".//*[text()='Discard Create']")
+	WebElement btnLocalDiscard;
 	//**********************************Global Actions*****************************************************************
 	
 	@FindBy(how=How.XPATH, using=".//button[text()='Submit Global Request']")
@@ -206,6 +208,9 @@ public class VendorPage {
 	@FindBy(how=How.XPATH, using="//*[text()='Save']")
 	WebElement btnSave;
 
+	
+	@FindBy(how=How.XPATH, using=".//button[text()='Submit Bank Request']")
+	WebElement btnBankRequest;
 /**********************************************************************************************************
 	/**
 	 * Instantiates a new home page.
@@ -827,6 +832,102 @@ public class VendorPage {
 		Thread.sleep(2000);
 	}
 	
+	public void clickLocalAction_Local()
+	{
+		Sync.waitForSeconds(Constants.WAIT_3);
+		/*WebElement waitElement = null;
+		FluentWait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
+		        .withTimeout(Duration.ofMinutes(3))
+		        .pollingEvery(Duration.ofSeconds(600))
+		        .ignoring(NoSuchElementException.class)
+		        .ignoring(TimeoutException.class);
+
+		//First checking to see if the loading indicator is found
+		// we catch and throw no exception here in case they aren't ignored
+		try {
+		  waitElement = fwait.until(new Function<WebDriver, WebElement>() {
+		   public WebElement apply(WebDriver driver) {
+		      return driver.findElement(By.xpath(".//*[@id='mxui_widget_Progress_0']"));
+		   }
+		 });
+		    } catch (Exception e) {
+		   }*/
+
+		//checking if loading indicator was found and if so we wait for it to
+		//disappear
+		/* if (waitElement != null) {
+		      WebDriverWait wait = new WebDriverWait(driver, 120);
+		      wait.until(ExpectedConditions.visibilityOfElementLocated(
+		    		  By.cssSelector(".glyphicon.glyphicon-flash"))
+		            );
+		        }*/
+		Sync.waitForObject(driver, By.cssSelector(".glyphicon.glyphicon-flash"));
+		Button.jsclick("Click Local Action Flash Button", driver.findElement(By.cssSelector(".glyphicon.glyphicon-flash")), driver);
+	}
 	
+	public boolean discardLocalButtonClick() throws InterruptedException 
+	{
+
+		Sync.waitForSeconds(Constants.WAIT_2);
+		if(Button.verifyObject(btnCreate)){
+			Sync.waitForObject(driver ,"Create Button Click", btnCreate);
+			Sync.waitForSeconds(Constants.WAIT_1);		
+			return Button.click("Create Button Click", btnLocalDiscard);
+		}else{
+			return Button.click("Create Button Click", btnLocalDiscard);
+		}
+
+	}
+
+	public void clickLocalAction_Bank()
+	{
+		Sync.waitForSeconds(Constants.WAIT_5);
+		/*WebElement waitElement = null;
+		FluentWait<WebDriver> fwait = new FluentWait<WebDriver>(driver)
+		        .withTimeout(Duration.ofMinutes(3))
+		        .pollingEvery(Duration.ofSeconds(600))
+		        .ignoring(NoSuchElementException.class)
+		        .ignoring(TimeoutException.class);
+
+		//First checking to see if the loading indicator is found
+		// we catch and throw no exception here in case they aren't ignored
+		try {
+		  waitElement = fwait.until(new Function<WebDriver, WebElement>() {
+		   public WebElement apply(WebDriver driver) {
+		      return driver.findElement(By.xpath(".//*[@id='mxui_widget_Progress_0']"));
+		   }
+		 });
+		    } catch (Exception e) {
+		   }
+
+		//checking if loading indicator was found and if so we wait for it to
+		//disappear
+		  if (waitElement != null) {
+		      WebDriverWait wait = new WebDriverWait(driver, 120);
+		      wait.until(ExpectedConditions.visibilityOfElementLocated(
+		    		  By.cssSelector(".glyphicon.glyphicon-flash"))
+		            );
+		        }*/
+
+		Button.jsclick("Click Local Action Flash Button", driver.findElement(By.cssSelector(".glyphicon.glyphicon-flash")), driver);
+	}
+	
+	
+	public void submitBankRequestTest() throws InterruptedException {
+
+		/*driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Sync.waitForObject(driver, "Verify Validate message", txtValidationMsg);*/
+		WebDriverWait wait=new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(btnLocalActions));
+		/*	Button.click("Local Actions button", btnLocalActions);
+		Sync.waitForSeconds(Constants.WAIT_2);*/
+		Button.click("Local Actions button", btnLocalActions);
+		Sync.waitForSeconds(Constants.WAIT_1);
+		wait.until(ExpectedConditions.elementToBeClickable(btnBankRequest));
+		Button.click("Click Global submit Global Request", btnBankRequest);
+		Sync.waitForSeconds(Constants.WAIT_2);
+		Thread.sleep(8000);
+	}
 	}
 

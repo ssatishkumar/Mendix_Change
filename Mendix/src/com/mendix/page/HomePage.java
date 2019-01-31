@@ -40,6 +40,9 @@ public class HomePage {
 		
 //		Sync.waitForSeconds(Constants.WAIT_3);
 		Sync.WaitForPageLoad(driver);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_3);
+		
 		Sync.waitForObject(driver, "Work", menuWork);
 		Menu.mouseHoverJScript("Work", menuWork, driver);
 //		Sync.waitForSeconds(Constants.WAIT_1);

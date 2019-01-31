@@ -184,12 +184,12 @@ public class ExcelUtil {
 	public static void excelWrite(String globalId)
 			throws FileNotFoundException, IOException {
 		try {
-			FileInputStream fis = new FileInputStream("input/Mendix-"+Constants.ENV+Constants.EXCEL_FORMAT);
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet("MaterialPage");
 			Cell cell = sheet.getRow(1).getCell(3);
 			cell.setCellValue(globalId);
-			FileOutputStream fos = new FileOutputStream("input/Mendix-"+Constants.ENV+Constants.EXCEL_FORMAT);
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
 		} catch (Exception e) {
@@ -201,12 +201,12 @@ public class ExcelUtil {
 	public static void excelWriteGlobalId(String globalId)
 			throws FileNotFoundException, IOException {
 		try {
-			FileInputStream fis = new FileInputStream("input/Mendix-"+Constants.ENV+Constants.EXCEL_FORMAT);
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet("MaterialPage");
 			Cell cell = sheet.getRow(1).getCell(4);
 			cell.setCellValue(globalId);
-			FileOutputStream fos = new FileOutputStream("input/Mendix-"+Constants.ENV+Constants.EXCEL_FORMAT);
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
 		} catch (Exception e) {
@@ -218,12 +218,12 @@ public class ExcelUtil {
 	public static void excelWriteMaterialNum(String materialNum)
 			throws FileNotFoundException, IOException {
 		try {
-			FileInputStream fis = new FileInputStream("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\Mendix-MDM.xlsm");
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			XSSFSheet sheet = workbook.getSheet("MaterialPage");
 			Cell cell = sheet.getRow(1).getCell(5);
 			cell.setCellValue(materialNum);
-			FileOutputStream fos = new FileOutputStream("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\Mendix-MDM.xlsm");
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
 		} catch (Exception e) {
@@ -235,12 +235,12 @@ public class ExcelUtil {
 	public static void excelWriteState(String globalId)
 			throws FileNotFoundException, IOException {
 		try {
-			FileInputStream fis = new FileInputStream("C:\\Users\\IBM_ADMIN\\Documents\\Documents\\Mendix_UFT\\Mendix-MDM.xlsm");
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			//call the getSheet() method of Workbook and pass the Sheet Name here. 
 			//In this case I have given the sheet name as “TestData” 
 			//or if you use the method getSheetAt(), you can pass sheet number starting from 0. Index starts with 0.
-			XSSFSheet sheet = workbook.getSheet("MaterialPage");
+			XSSFSheet sheet = workbook.getSheet("TestPlan");
 			//XSSFSheet sheet = workbook.getSheetAt(0);
 			//Now create a row number and a cell where we want to enter a value. 
 			//Here im about to write my test data in the cell B2. It reads Column B as 1 and Row 2 as 1. Column and Row values start from 0.
@@ -254,7 +254,7 @@ public class ExcelUtil {
 			//if it is numeric, we need to set the cell type as number
 			//		cell.setCellType(cell.CELL_TYPE_STRING);
 			cell.setCellValue(globalId);
-			FileOutputStream fos = new FileOutputStream("C:\\Users\\IBM_ADMIN\\Documents\\Documents\\Mendix_UFT\\Mendix_DataSheet.xlsx");
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
 		} catch (Exception e) {
@@ -267,7 +267,7 @@ public class ExcelUtil {
 	{
 		try
 		{
-			FileInputStream fis = new FileInputStream("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\Mendix_DataSheet.xlsx");
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			int col_Num = -1;
 			XSSFSheet sheet = workbook.getSheet(sheetName);
@@ -288,10 +288,10 @@ public class ExcelUtil {
 			XSSFCell cell = row.getCell(col_Num);
 			if(cell == null)
 				cell = row.createCell(col_Num);
-
+			System.out.println(value);
 			cell.setCellValue(value);
-
-			FileOutputStream fos = new FileOutputStream("C:\\Users\\IBM_ADMIN\\Downloads\\MDM_POC_Upgrade\\MDM_POC_Upgrade\\input\\Mendix-MDM.xlsm");
+			
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
 		}
@@ -304,7 +304,7 @@ public class ExcelUtil {
 	}
 
 	public static void main(String args[]) throws IOException {
-		Runtime.getRuntime().exec("C:\\Users\\IBM_ADMIN\\git\\MDM_TEST\\MDM_POC\\AutoIt UFT Launch\\UFT.exe");
+		Runtime.getRuntime().exec("AutoIt UFT Launch/UFT.exe");
 
 	}
 

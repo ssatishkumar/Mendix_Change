@@ -45,6 +45,7 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialPage.netWeightEnterTest(dataMap.get("Net Weight Base UoM"));
 		SharedDriver.pageContainer.materialPage.uomPrimarySelectionTest();
 		
+		
 	}
 
 	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
@@ -52,9 +53,11 @@ public class MaterialScript {
 	{
 
 		SharedDriver.pageContainer.processInfoPage.processInfoSearch();
-		SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
-//		SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
+		//SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
+	    //SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.processInfoPage.getState_New(dataMap.get("RequestId"));
+		//SharedDriver.pageContainer.processInfoPage.requestCreated_between();
+		
 		SharedDriver.pageContainer.processInfoPage.browserClose();
 	}
 
@@ -86,6 +89,7 @@ public class MaterialScript {
 	@Test
 	public void Material_Create_Validate_Submit_Check() throws InterruptedException, FileNotFoundException, IOException 
 	{
+		
 		SharedDriver.pageContainer.materialPage.validateTestCreate();
 		SharedDriver.pageContainer.materialPage.submitGlobalRequestTest();
 		SharedDriver.pageContainer.materialPage.getRequestId_Create();

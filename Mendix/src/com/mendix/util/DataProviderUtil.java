@@ -70,7 +70,7 @@ public class DataProviderUtil {
 		 */
 		@DataProvider(name="Process_Information_Check",parallel=false)
 		public static Iterator<Object[]> ProcessInfoPage(){
-			Iterator<Object[]> testData=ExcelUtil.getTestData("input/Mendix-"+Constants.ENV+Constants.EXCEL_FORMAT, "MaterialPage");
+			Iterator<Object[]> testData=ExcelUtil.getTestData("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX, "TestPlan");
 			return testData;
 		}
 		
