@@ -1,5 +1,8 @@
 package com.mendix.page;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -11,6 +14,7 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -199,6 +203,9 @@ public class MaterialPage {
 	
 	@FindBy(how=How.XPATH, using="//*[text()='Global ID']/../../td[4]/div/input")
 	WebElement txtboxGlobalIdEnter; 
+	
+	
+	
 	/**
 	 * Enter UserName.
 	 * Enter Password
@@ -208,6 +215,42 @@ public class MaterialPage {
 	 * @param strMenuName the str menu name
 	 * @return true, if successful
 	 */
+	
+	@FindBy(how=How.XPATH, using="//*[text()='OK']")
+	WebElement btnOK;
+	
+	@FindBy(how=How.XPATH,using="//button[@class='btn btn-primary']")
+	WebElement btnOKay;
+	
+
+
+
+        @FindBy(how=How.XPATH, using="//*[text()='Reject Global Request']")
+	WebElement btnRejectGlobalRequest;
+
+
+@FindBy(how=How.XPATH, using="//*[text()='Save']")
+	WebElement btnSave;
+
+
+
+
+//@FindBy(how=How.XPATH, using="(.//*[text()='New'])[4]")
+	@FindBy(how=How.XPATH, using="(.//*[starts-with(@id,'uniqName') And text()='New'])[4]")
+	WebElement btnCommentNew;
+	
+	@FindBy(how=How.XPATH, using="(.//*[starts-with(@id,'mxui_widget_TextArea')])[4]")
+	WebElement textComment;
+
+	
+	
+	/*@FindBy(how=How.XPATH, using=".//*[@class='mx-layoutcontainer-wrapper mx-scrollcontainer-wrapper']/div[2]/button/span")
+	WebElement	btnLocalActions;
+*/
+@FindBy(how=How.XPATH, using="//*[text()='Discard Create']")
+	WebElement btnDiscardCreate;
+@FindBy(how=How.XPATH, using="//span[@class='glyphicon glyphicon-ban-circle']")
+WebElement btnDiscardCreates;
 
 	public void  switchToPopup()
 			throws InterruptedException {
@@ -313,10 +356,10 @@ public class MaterialPage {
 
 	public boolean materialGrpSelectionTest(String strValue) throws InterruptedException {
 		
-		
+		Sync.waitForSeconds(Constants.WAIT_5);
 		JavascriptExecutor js;
 		js = (JavascriptExecutor) driver;
-		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"50px\" })");
+		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"60px\" })");
 		Sync.waitForElementToBeClickable(driver, btnMaterialGrpselection);
 		Button.jsclick("Click Material Group Selection button", btnMaterialGrpselection, driver);
 		Sync.waitForObject(driver, "Wait for Material Group Selection Text Box", txtboxMaterialGrpSearch);
@@ -493,7 +536,7 @@ public class MaterialPage {
 		String[] parts = reqId.split(" ");
 		String Id = parts[2];
 		System.out.println("RequestId is: " + Id);
-		ExcelUtil.setCellData("TestPlan","RequestId",5,Id);
+		ExcelUtil.excelWrite(Id);
 //		Sync.waitForSeconds(Constants.OBJECT_WAIT_TIME);
 		/*System.out.println(btnMsgReqIdOk.getCssValue("color"));
 		Actions actions = new Actions(driver);
@@ -642,6 +685,8 @@ public class MaterialPage {
 	}
 
 	public void scrolltoGlobalSearch() {
+		Sync.waitForSeconds(Constants.WAIT_6);
+		
 		JavascriptExecutor js;
 		js = (JavascriptExecutor) driver;
 		js.executeScript("$(\".mx-layoutcontainer-wrapper.mx-scrollcontainer-wrapper\").animate({ scrollBottom: \"100px\" })");
@@ -756,6 +801,91 @@ public class MaterialPage {
 		Sync.waitForSeconds(Constants.WAIT_5);
 		Button.click("Click Search button", btnReqIdEnter);
 		Sync.waitForSeconds(Constants.WAIT_5); } 
+	public void RejectGDA() throws InterruptedException, AWTException {
+
+		System.out.println("Scrolling action");
+
+		Thread.sleep(3000);
+		System.out.println("Scrolling");
+		String test = driver.findElement(By.xpath(".//*[@id='mxui_widget_TextInput_3']/p")).getText();
+		driver.findElement(By.xpath(".//*[@id='mxui_widget_TextInput_3']/p")).click();
+		System.out.println(test);
+		Thread.sleep(2000);		
+		
+		Robot robot = new Robot();  // Robot class throws AWT Exception	
+        Thread.sleep(4000); // Thread.sleep throws InterruptedException	
+        robot.keyPress(KeyEvent.VK_DOWN);
+        Thread.sleep(2000);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+        
+        Actions action = new Actions(driver);
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(1000);
+	
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(1000);
+		
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(1000);
+		
+		action.sendKeys(Keys.PAGE_DOWN).build().perform();
+		Thread.sleep(1000);
+        
+		Sync.waitForObject(driver, btnCommentNew);
+		Thread.sleep(5000);
+		System.out.println("checking for new button");
+		
+		String text1=driver.findElement(By.xpath(".//*[@id='mxui_widget_NumberInput_3']/p")).getText();
+		System.out.println(text1);
+		String text2=driver.findElement(By.xpath("(.//*[@class='btn mx-button mx-name-newButton2 btn-default'])[1]")).getText();
+		System.out.println(text2);
+		
+		driver.findElement(By.xpath("(.//*[@class='btn mx-button mx-name-newButton2 btn-default'])[1]")).click();
+		
+		System.out.println("clicked new button");
+		Sync.waitForSeconds(Constants.WAIT_5);
+
+		Textbox.enterValue("typing comment", textComment, "material data");
+		Textbox.click("Click on Save Button", btnSave);
+		Thread.sleep(2000);
+		
+		
+		Button.click("Local Actions button click", btnLocalActions);
+		Thread.sleep(2000);
+		Sync.waitForObject(driver, btnRejectGlobalRequest);
+		Textbox.click("Click on reject button in locl action", btnRejectGlobalRequest);
+		Thread.sleep(3000);
+		Sync.waitForObject(driver, btnOK);
+		Button.click("Click On OK button", btnOK);
+		Thread.sleep(2000);
+		
+	}
+	
+	public void DiscardCreateGDA() throws InterruptedException {
+
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Button.click("Local Actions button click", btnLocalActions);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		
+/*		WebDriverWait wait = new WebDriverWait(driver,50);
+	    WebElement element = wait.until(
+	                        ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Discard Create']")));*/
+
+		
+		Sync.waitForObject(driver, btnDiscardCreates);
+		Button.click("Click on Discard button in locl action", btnDiscardCreates);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		
+		Sync.waitForObject(driver, btnOKay);
+		Button.click("Click On OK button", btnOKay);
+		
+	}
+
+
+
 	
 	
 

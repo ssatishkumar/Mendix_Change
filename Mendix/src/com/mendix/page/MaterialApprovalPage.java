@@ -99,7 +99,9 @@ public class MaterialApprovalPage {
 	public boolean reqIdSearchMyTasks(String strValue) 
 
 	{
-		Sync.waitForSeconds(Constants.WAIT_6);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		Sync.waitForSeconds(Constants.WAIT_5);
+		
 		Sync.waitForElementToBeClickable(driver, menuMyTask);
 
 		Button.jsclick("Search My task", menuMyTask, driver);
