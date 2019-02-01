@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Change Material]">
+  <test thread-count="5" name="Create_Material_Rejections_with_Discard(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Create_Material_Rejections_with_Discard" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Create_Material_Rejections_with_Discard(failed) -->
+  <test thread-count="5" name="Process_Information_Check_Discard(failed)">
+    <classes>
+      <class name="com.mendix.test.MaterialScript">
+        <methods>
+          <include name="Process_Information_Check" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mendix.test.MaterialScript -->
+    </classes>
+  </test> <!-- Process_Information_Check_Discard(failed) -->
+</suite> <!-- Failed suite [Change Material] -->
