@@ -88,11 +88,7 @@ public class LoginScript {
 		if(stateInput.equalsIgnoreCase("GDA")) {
 			Assert.assertTrue(SharedDriver.pageContainer.loginPage.login("MDM_GDA", "Heineken01"));
 		}
-		//SharedDriver.pageContainer.loginPage.login("MDMM_"+OpL+"01_"+stateInput+"","Heineken01");
-		else if(stateInput.equalsIgnoreCase("GBDA")) {
-			Assert.assertTrue(SharedDriver.pageContainer.loginPage.login("MDMM_GBDA", "Heineken01"));
-		}	
-
+		SharedDriver.pageContainer.loginPage.login("MDMM_"+OpL+"01_"+stateInput+"","Heineken01");
 	}
 
 	@Test(dataProvider="HeiPort_Login",dataProviderClass=staticProviderClass.class)

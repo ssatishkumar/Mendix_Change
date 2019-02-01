@@ -58,7 +58,7 @@ public class Material_Change_Page {
 		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitUntilObjectDisappears(driver, "Wait for Materials", By.xpath((".//*[@id='mxui_widget_Progress_0']/div[2]")));
 		Sync.waitForObject(driver, "Wait until the Material appears", checkBoxEdit);
-		Button.click("Click Edit Checkbox", checkBoxEdit);
+		Button.click("Click Materials Menu", checkBoxEdit);
 		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitForSeconds(Constants.WAIT_5);
 	}
@@ -68,7 +68,7 @@ public class Material_Change_Page {
 		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitUntilObjectDisappears(driver, "Wait for Materials", By.xpath((".//*[@id='mxui_widget_Progress_0']/div[2]")));
 		Sync.waitForObject(driver, "Wait until the Material appears", btnEdit);
-		Button.click("Click Edit Button", btnEdit);
+		Button.click("Click Materials Menu", btnEdit);
 		Sync.waitForSeconds(Constants.WAIT_5);
 		Sync.waitForSeconds(Constants.WAIT_5);
 	}

@@ -48,41 +48,12 @@
 			</class>
 		</classes>
 	</test>
-	<test name="HeiPort_Login_GBDA">
-		<classes>
-			<class name="com.mendix.test.LoginScript">
-				<methods>
-					<include name="openBrowser" />
-					<include name="loginAsGBDA" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Material_Data_With_Reject_GBDA">
-		<classes>
-			<class name="com.mendix.test.MaterialScript">
-				<methods>
-					<include
-						name="Material_Data_With_Reject_GDA" />
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Process_Information_Check_GBDA">
-		<classes>
-			<class name="com.mendix.test.MaterialScript">
-				<methods>
-					<include name="Process_Information_Check" />
-				</methods>
-			</class>
-		</classes>
-	</test>
 	<test name="HeiPort_Login_GDA">
 		<classes>
 			<class name="com.mendix.test.LoginScript">
 				<methods>
 					<include name="openBrowser" />
-					<include name="loginAsGDA" />
+					<include name="loginAsApprover" />
 				</methods>
 			</class>
 		</classes>

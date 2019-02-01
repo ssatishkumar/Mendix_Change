@@ -186,8 +186,8 @@ public class ExcelUtil {
 		try {
 			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet("TestPlan");
-			Cell cell = sheet.getRow(5).getCell(4);
+			XSSFSheet sheet = workbook.getSheet("MaterialPage");
+			Cell cell = sheet.getRow(1).getCell(3);
 			cell.setCellValue(globalId);
 			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
@@ -203,8 +203,8 @@ public class ExcelUtil {
 		try {
 			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet("TestPlan");
-			Cell cell = sheet.getRow(1).getCell(10);
+			XSSFSheet sheet = workbook.getSheet("MaterialPage");
+			Cell cell = sheet.getRow(1).getCell(4);
 			cell.setCellValue(globalId);
 			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
@@ -303,91 +303,6 @@ public class ExcelUtil {
 		//        return true;
 	}
 
-	public static void setCellDataNew(String sheetName, String colName, int rowNum, String value)
-	{
-		List<Object[]> data = new ArrayList<Object[]>();
-		try
-		{
-			
-			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
-			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			
-			
-			//Get first sheet from the workbook
-			XSSFSheet sheet = workbook.getSheet(sheetName);
-			
-			//Get iterator to all the rows in current sheet
-			Iterator<Row> rowIterator = sheet.rowIterator();
-			
-
-			Row firstRow=rowIterator.next();
-			
-
-			Map<String,String> columnNamesMap=getColumnNames(firstRow);
-			
-
-			while(rowIterator.hasNext()){
-				Iterator<Cell> cellIterator=rowIterator.next().cellIterator();
-				Map<String,String> rowMap=new LinkedHashMap<String, String>();
-				for(Entry<?, ?> entry:columnNamesMap.entrySet()){
-					String strColumnName=entry.getKey().toString();
-					String strValue="";
-					try{
-						Cell cell=cellIterator.next();
-						if(cell!=null){strValue=cell.toString();}
-					}catch(Exception e){}
-					rowMap.put(strColumnName, strValue.trim());
-				}
-				
-				if(rowMap.get("Execute").equalsIgnoreCase("Y")){
-//					if(rowMap.get("Test_Case").equals(rowMap.get("Test_Case"))){
-//						if(rowMap1.get("OpCo").equals(rowMap2.get("OpCo"))){	
-							//rowMap.put("Iteration", ""+inRowCounter);
-							
-							data.add(new Object[]{rowMap});
-							//inRowCounter++;
-//							break;
-
-//						}
-//					}
-//				}
-
-			}
-			if(data.iterator().hasNext())
-			{
-			int col_Num = -1;
-			XSSFRow row = sheet.getRow(0);
-			for (int i = 0; i < row.getLastCellNum(); i++) {
-				if (row.getCell(i).getStringCellValue().trim().equals(colName))
-				{
-					col_Num = i;
-				}
-			}
-
-			sheet.autoSizeColumn(col_Num);
-			row = sheet.getRow(rowNum - 1);
-			if(row==null)
-				row = sheet.createRow(rowNum - 1);
-
-			XSSFCell cell = row.getCell(col_Num);
-			if(cell == null)
-				cell = row.createCell(col_Num);
-			System.out.println(value);
-			cell.setCellValue(value);
-			
-			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
-			workbook.write(fos);
-			fos.close();
-		}
-			}
-		}
-		catch (Exception ex)
-		{
-			ex.printStackTrace();
-			//            return  false;
-		}
-		//        return true;
-	}
 	public static void main(String args[]) throws IOException {
 		Runtime.getRuntime().exec("AutoIt UFT Launch/UFT.exe");
 

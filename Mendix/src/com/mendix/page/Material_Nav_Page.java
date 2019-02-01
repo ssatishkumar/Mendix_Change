@@ -67,10 +67,7 @@ public class Material_Nav_Page {
 		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
 		Sync.waitForObject(driver, textLocalData);
 		Button.click("Local Data", textLocalData);
-		
-		/*Sync.waitForSeconds(Constants.WAIT_6);
-
-		Sync.waitForObject(driver, BtnAddPlantData);*/
+		Sync.waitForObject(driver, BtnAddPlantData);
 		/*return Button.click("Click Edit button", BtnAddPlantData);*/
 		
 	}
@@ -87,10 +84,8 @@ public class Material_Nav_Page {
 
 		Sync.waitForSeconds(Constants.WAIT_6);
 		Sync.waitUntilObjectDisappears(driver, "Waiting of Create page to Load", By.xpath(".//*[@id='mxui_widget_Progress_0']/div[2]"));
-		Sync.waitForSeconds(Constants.WAIT_6);
-		
 		Sync.waitForObject(driver, BtnAddPlantData);
-		Button.click("Clicked New Button", BtnAddPlantData);
+		Button.click("Local Plant Data", BtnAddPlantData);
 		
 		
 		WebDriverWait wait= new WebDriverWait(driver, 10);

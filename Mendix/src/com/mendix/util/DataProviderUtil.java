@@ -81,11 +81,7 @@ public class DataProviderUtil {
 		}
 		*/
 		
-		@DataProvider(name="Process_Information_Check_Material_Reject",parallel=false)
-		public static Iterator<Object[]> ProcessInfoPageRejectMaterial(){
-			Iterator<Object[]> testData=ExcelUtil.getTestData("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX, "TestPlan");
-			return testData;
-		}
+		
 	}
 	
 	

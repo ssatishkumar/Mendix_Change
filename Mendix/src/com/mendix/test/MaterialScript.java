@@ -1,6 +1,5 @@
 package com.mendix.test;
 
-import java.awt.AWTException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
@@ -54,7 +53,7 @@ public class MaterialScript {
 	{
 
 		SharedDriver.pageContainer.processInfoPage.processInfoSearch();
-		SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
+		//SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
 	    //SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.processInfoPage.getState_New(dataMap.get("RequestId"));
 		//SharedDriver.pageContainer.processInfoPage.requestCreated_between();
@@ -153,56 +152,6 @@ public class MaterialScript {
 		SharedDriver.pageContainer.processInfoPage.browserClose();	
 		SharedDriver.pageContainer.materialApprovalPage.launchUFT();
 	}
-	@Test(dataProvider="Process_Information_Check_Material_Reject",dataProviderClass=staticProviderClass.class)
-	public void Material_Data_With_Reject_GDA (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException, AWTException 
-	{
-		
-//		try{
-		    System.out.println("Start:Material_Data_With_Reject_GDA ");
-			SharedDriver.pageContainer.homePage.navigateToWorkflow();
-			SharedDriver.pageContainer.materialPage.switchToPopup();
-			SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
-			System.out.println("search task opened");
-			
-	//	SharedDriver.pageContainer.materialPage.validateTestCreate();
-	//	SharedDriver.pageContainer.materialApprovalPage.duplicateCheck();
-		SharedDriver.pageContainer.materialPage.RejectGDA();
-		SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
-		
-		System.out.println("Material_Data_With_Reject_GDA-Done");
-		/*}catch (Exception e){
-			System.out.println("Material_Data_With_Reject_GDA is not completed");
-			driver.close();
-		}*/
-		
-	}
-	
-	
-	@Test(dataProvider="Process_Information_Check_Material_Reject",dataProviderClass=staticProviderClass.class)
-	public void Create_Material_Rejections_with_Discard (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
-	{
-		try{
-		System.out.println("Start:Create_Material_Rejections_with_Discard");
-
-		SharedDriver.pageContainer.homePage.navigateToWorkflow();
-		SharedDriver.pageContainer.materialPage.switchToPopup();
-		SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
-		System.out.println("search task opened");
-		SharedDriver.pageContainer.materialPage.DiscardCreateGDA();
-		//SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
-		
-		
-		System.out.println("Create_Material_Rejections_with_Discard-Done");
-		
-	}catch(Exception e){
-		
-		System.out.println("Create_Material_Rejections_with_Discard is not completed");
-		driver.close();
-	}
-	}
-
-
-	
 
 }
 

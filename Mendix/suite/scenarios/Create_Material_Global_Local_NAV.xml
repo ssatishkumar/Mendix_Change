@@ -41,7 +41,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Process_Information_Check_LDS_1">
+<!-- 	<test name="Process_Information_Check_LDS_1">
 		<classes>
 			<class name="com.mendix.test.MaterialNavScript">
 				<methods>
@@ -156,7 +156,7 @@
 				</methods>
 			</class>
 		</classes>
-	</test>
+	</test> -->
 </suite> 
 
 
