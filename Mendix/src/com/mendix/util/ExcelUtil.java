@@ -181,14 +181,35 @@ public class ExcelUtil {
 		return columnNamesMap;
 	}
 
-	public static void excelWrite(String globalId)
+	public static void excelWrite(String globalId) 
 			throws FileNotFoundException, IOException {
 		try {
 			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet("MaterialPage");
-			Cell cell = sheet.getRow(1).getCell(3);
+			XSSFSheet sheet = workbook.getSheet("TestPlan");
+			
+			Cell cell = sheet.getRow(6).getCell(4);
+			cell.setCellValue(globalId); 
+			
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
+			workbook.write(fos);
+			fos.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void excelWriteNew(String globalId)  throws FileNotFoundException,IOException  {
+		try {
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = workbook.getSheet("TestPlan");
+			Map<String,String> rowMap1=new LinkedHashMap<String, String>();
+			if(rowMap1.get("Execute").equalsIgnoreCase("Y")) {
+			Cell cell = sheet.getRow(6).getCell(4);
+			//Cell cell=new Cell();
 			cell.setCellValue(globalId);
+			}
 			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
 			fos.close();
@@ -203,8 +224,8 @@ public class ExcelUtil {
 		try {
 			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			XSSFWorkbook workbook = new XSSFWorkbook(fis);
-			XSSFSheet sheet = workbook.getSheet("MaterialPage");
-			Cell cell = sheet.getRow(1).getCell(4);
+			XSSFSheet sheet = workbook.getSheet("TestPlan");
+			Cell cell = sheet.getRow(1).getCell(10);
 			cell.setCellValue(globalId);
 			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
 			workbook.write(fos);
@@ -302,6 +323,47 @@ public class ExcelUtil {
 		}
 		//        return true;
 	}
+	public static void setCellDataNew(String sheetName, int colNum, int rowNum, String value)
+	{
+		try
+		{
+			FileInputStream fis = new FileInputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		
+			XSSFSheet sheet = workbook.getSheet(sheetName);
+			XSSFRow row=null;
+			XSSFCell cell=null;
+			
+
+			 row = sheet.getRow(rowNum);
+			
+			
+			if(row==null)
+				row=sheet.createRow(rowNum);
+				cell=row.getCell(colNum);
+		    if(cell==null)
+		    	cell=row.createCell(colNum);
+		    cell.setCellValue(value);
+				
+			
+
+			
+			
+			FileOutputStream fos = new FileOutputStream("input/Mendix_TestPlan"+Constants.EXCEL_FORMAT_XLSX);
+			workbook.write(fos);
+			fos.close();
+		}
+		catch (Exception ex)
+		{
+			ex.printStackTrace();
+			//            return  false;
+		}
+		//        return true;
+	}
+
+
+
+
 
 	public static void main(String args[]) throws IOException {
 		Runtime.getRuntime().exec("AutoIt UFT Launch/UFT.exe");
