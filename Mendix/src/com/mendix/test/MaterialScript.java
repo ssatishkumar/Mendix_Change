@@ -1,5 +1,6 @@
 package com.mendix.test;
 
+import java.awt.AWTException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
@@ -53,13 +54,35 @@ public class MaterialScript {
 	{
 
 		SharedDriver.pageContainer.processInfoPage.processInfoSearch();
-		//SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
+		SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
 	    //SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
 		SharedDriver.pageContainer.processInfoPage.getState_New(dataMap.get("RequestId"));
 		//SharedDriver.pageContainer.processInfoPage.requestCreated_between();
 		
 		SharedDriver.pageContainer.processInfoPage.browserClose();
 	}
+	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
+	public void Process_Information_Check_FlagDeletion(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
+	{
+
+		SharedDriver.pageContainer.processInfoPage.processInfoSearch();
+		SharedDriver.pageContainer.processInfoPage.reqIdSearch_Global(dataMap.get("RequestId"));
+	    //SharedDriver.pageContainer.processInfoPage.getState(dataMap.get("RequestId"));
+		SharedDriver.pageContainer.processInfoPage.getState_New(dataMap.get("RequestId"));
+		
+		SharedDriver.pageContainer.materialPage.navigateToDashboard();
+		SharedDriver.pageContainer.materialPage.advancedSearch();
+		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
+		SharedDriver.pageContainer.materialPage.reqIdSearchGlobal(dataMap.get("RequestId"));
+		SharedDriver.pageContainer.materialPage.getGlobalId();
+//		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
+//		SharedDriver.pageContainer.materialPage.getMaterial_Number();
+		SharedDriver.pageContainer.processInfoPage.browserClose();	
+		SharedDriver.pageContainer.materialApprovalPage.launchUFT();
+		
+		SharedDriver.pageContainer.processInfoPage.browserClose();
+	}
+
 
 	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
 	public void Material_Create_Review_Global_Data_Approve_GDA(Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
@@ -70,7 +93,7 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialApprovalPage.approvalBtnClick();
 		SharedDriver.pageContainer.materialApprovalPage.duplicateCheck();
 		SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
-//		SharedDriver.pageContainer.processInfoPage.browserClose();
+	    SharedDriver.pageContainer.processInfoPage.browserClose();
 //		SharedDriver.pageContainer.materialApprovalPage.duplicateCheck();
 
 	}
@@ -93,7 +116,7 @@ public class MaterialScript {
 		SharedDriver.pageContainer.materialPage.validateTestCreate();
 		SharedDriver.pageContainer.materialPage.submitGlobalRequestTest();
 		SharedDriver.pageContainer.materialPage.getRequestId_Create();
-//		SharedDriver.pageContainer.materialPage.getRequestId();
+		SharedDriver.pageContainer.materialPage.getRequestId();
 		SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
 
 	}
@@ -152,6 +175,77 @@ public class MaterialScript {
 		SharedDriver.pageContainer.processInfoPage.browserClose();	
 		SharedDriver.pageContainer.materialApprovalPage.launchUFT();
 	}
+	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
+	public void Global_Lock_Validation (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
+	{
+		
+		SharedDriver.pageContainer.homePage.navigateToWorkflow();
+		SharedDriver.pageContainer.materialPage.switchToPopup();
+		SharedDriver.pageContainer.materialPage.navigateToDashboard();
+		SharedDriver.pageContainer.materialPage.advancedSearch();
+		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
+    	//SharedDriver.pageContainer.materialPage.getCurrDate();
+		SharedDriver.pageContainer.materialPage.globalSearch(dataMap.get("Global_ID"));
+		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
+		SharedDriver.pageContainer.material_Change_Page.getGlobalIdNew();
+		
+		SharedDriver.pageContainer.materialPage.navigateToDashboard();
+		SharedDriver.pageContainer.materialPage.advancedSearch();
+		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
+    	//SharedDriver.pageContainer.materialPage.getCurrDate();
+		SharedDriver.pageContainer.materialPage.globalSearch(dataMap.get("Global_ID"));
+		
+		SharedDriver.pageContainer.material_Change_Page.getGlobalIdNew();
+//		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
+//		SharedDriver.pageContainer.materialPage.getMaterial_Number();
+		SharedDriver.pageContainer.processInfoPage.browserClose();	
+		//SharedDriver.pageContainer.materialApprovalPage.launchUFT();
+	}
+	
+	
+	
+	@Test(dataProvider="Process_Information_Check_Material_Reject",dataProviderClass=staticProviderClass.class)
+	public void Create_Material_Rejections_with_Discard (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
+	{
+		try{
+		System.out.println("Start:Create_Material_Rejections_with_Discard");
+
+		SharedDriver.pageContainer.homePage.navigateToWorkflow();
+		SharedDriver.pageContainer.materialPage.switchToPopup();
+		SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
+		System.out.println("search task opened");
+		SharedDriver.pageContainer.materialPage.DiscardCreateGDA();
+		
+		System.out.println("Create_Material_Rejections_with_Discard-Done");
+		
+	}catch(Exception e){
+		
+		System.out.println("Create_Material_Rejections_with_Discard is not completed");
+		driver.close();
+	}
+  }
+	@Test(dataProvider="Process_Information_Check_Material_Reject",dataProviderClass=staticProviderClass.class)
+	public void Material_Data_With_Reject_GDA (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException, AWTException 
+	{
+		
+//		try{
+		System.out.println("Start:Material_Data_With_Reject_GDA ");
+			SharedDriver.pageContainer.homePage.navigateToWorkflow();
+			SharedDriver.pageContainer.materialPage.switchToPopup();
+			SharedDriver.pageContainer.materialApprovalPage.reqIdSearchMyTasks(dataMap.get("RequestId"));
+			System.out.println("search task opened");
+	//	SharedDriver.pageContainer.materialPage.validateTestCreate();
+	//	SharedDriver.pageContainer.materialApprovalPage.duplicateCheck();
+		SharedDriver.pageContainer.materialPage.RejectGDA();
+		
+		System.out.println("Material_Data_With_Reject_GDA-Done");
+		/*}catch (Exception e){
+			System.out.println("Material_Data_With_Reject_GDA is not completed");
+			driver.close();
+		}*/
+		
+	}
+	
 
 }
 

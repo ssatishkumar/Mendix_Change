@@ -84,6 +84,8 @@ public class MaterialApprovalPage {
 
 	@FindBy(how=How.XPATH, using="//*[text()='OK']")
 	WebElement btnMsgReqIdOkdraft;
+	@FindBy(how=How.XPATH, using="//*[text()='OK']")
+	WebElement btnOK;
 	/**
 	 * Enter UserName.
 	 * Enter Password
@@ -379,7 +381,7 @@ public class MaterialApprovalPage {
 		//checking if loading indicator was found and if so we wait for it to
 		//disappear
 //		  if (waitElement != null) {
-		      WebDriverWait wait = new WebDriverWait(driver, 120);
+		      WebDriverWait wait = new WebDriverWait(driver, 180);
 		      wait.until(ExpectedConditions.visibilityOfElementLocated(
 		    		  By.cssSelector(".btn.btn-primary"))
 		            );
@@ -412,6 +414,14 @@ public class MaterialApprovalPage {
 //		}
 		
 	}
+	public void submitRequestOkButtonClick() {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 180);
+	      wait.until(ExpectedConditions.visibilityOfElementLocated(
+	    		  By.xpath("//*[text()='OK']")));
+		Button.click("Click On OK button", btnOK);
+	}
+	
 
 	public boolean submitGlobalRequest()
 	{

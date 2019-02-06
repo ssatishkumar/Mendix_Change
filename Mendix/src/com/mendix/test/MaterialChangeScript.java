@@ -21,11 +21,38 @@ public class MaterialChangeScript {
 		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
     	//SharedDriver.pageContainer.materialPage.getCurrDate();
 		SharedDriver.pageContainer.materialPage.globalSearch(dataMap.get("Global_ID"));
-		//		SharedDriver.pageContainer.materialPage.getGlobalId();
+			SharedDriver.pageContainer.materialPage.getGlobalId();
 		SharedDriver.pageContainer.materialPage.clickFullMaterialData();
 		//SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
 		SharedDriver.pageContainer.material_Change_Page.clickEditCheckBox();
 		SharedDriver.pageContainer.material_Change_Page.clickEditbutton();
+
+
+	}
+	@Test(dataProvider="Process_Information_Check",dataProviderClass=staticProviderClass.class)
+	public void Material_Delete_Record (Map<String,String> dataMap) throws InterruptedException, FileNotFoundException, IOException 
+	{
+		SharedDriver.pageContainer.homePage.navigateToWorkflow();
+		SharedDriver.pageContainer.materialPage.switchToPopup();
+		SharedDriver.pageContainer.materialPage.navigateToDashboard();
+		SharedDriver.pageContainer.materialPage.advancedSearch();
+		SharedDriver.pageContainer.materialPage.scrolltoGlobalSearch();
+    	//SharedDriver.pageContainer.materialPage.getCurrDate();
+		SharedDriver.pageContainer.materialPage.globalSearch(dataMap.get("Global_ID"));
+		//		SharedDriver.pageContainer.materialPage.getGlobalId();
+		SharedDriver.pageContainer.materialPage.clickFullMaterialDataDeletion();
+		//SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
+		//SharedDriver.pageContainer.materialApprovalPage.submitRequestOkBtnClick();
+		
+		
+		SharedDriver.pageContainer.material_Change_Page.clickFlagForDeletionButton();
+		
+	
+		SharedDriver.pageContainer.materialPage.clickLocalAction();
+		SharedDriver.pageContainer.material_Change_Page.clickFlagForDeletion();
+		SharedDriver.pageContainer.materialPage.getRequestId();
+		SharedDriver.pageContainer.materialApprovalPage.submitRequestOkButtonClick();
+		
 
 
 	}
